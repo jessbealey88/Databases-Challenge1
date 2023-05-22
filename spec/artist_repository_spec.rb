@@ -15,15 +15,15 @@ def reset_artists_table
         repo = ArtistRepository.new
         artists = repo.all
 
-        artists.length # =>  2
+        expect(artists.length).to eq 2
         
-        artists[0].id # =>  1
-        artists[0].name # =>  'Pixies'
-        artists[0].genre # =>  'Rock'
+        expect(artists[0].id).to eq '1'
+        expect(artists[0].name).to eq 'Pixies'
+        expect(artists[0].genre).to eq 'Rock'
         
-        artists[1].id # =>  2
-        artists[1].name # =>  'ABBA'
-        artists[1].genre # =>  'Pop'
+        expect(artists[1].id).to eq '2'
+        expect(artists[1].name).to eq 'ABBA'
+        expect(artists[1].genre).to eq 'Pop'
 
     end
     
