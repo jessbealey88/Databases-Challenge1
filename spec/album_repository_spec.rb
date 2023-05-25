@@ -22,4 +22,24 @@ def reset_albums_table
         expect(albums.first.artist_id).to eq '1'
     
     end
+
+    it "lists a single album Bossanova" do
+        repo = AlbumRepository.new
+        album = repo.find(1)
+
+        expect(album.title).to eq 'Bossanova' 
+        expect(album.release_year).to eq '1999'
+        expect(album.artist_id).to eq '1'
+    end 
+
+    it "lists a single album Surfer Rosa" do
+        repo = AlbumRepository.new
+        album = repo.find(2)
+
+        expect(album.title).to eq 'Surfer Rosa' 
+        expect(album.release_year).to eq '2001'
+        expect(album.artist_id).to eq '1'
+    end
+
+
   end
