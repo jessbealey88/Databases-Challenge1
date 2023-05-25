@@ -13,10 +13,10 @@ Otherwise, [follow this recipe to design and create the SQL schema for your tabl
 ```
 # EXAMPLE
 
-Table: students
+Table: artists
 
 Columns:
-id | name | cohort_name
+id | name | genre
 ```
 
 ## 2. Create Test SQL seeds
@@ -58,7 +58,7 @@ end
 
 # Repository class
 # (in lib/music_library.rb)
-class MusicLibrary
+class ArtistRepository
 end
 ```
 
@@ -109,10 +109,15 @@ class ArtistRepository
   # No arguments
   def all
     # Executes the SQL query:
-    # SELECT id, name, genre FROM students;
+    # SELECT id, name, genre FROM artists;
 
     # Returns an array artist objects.
   end
+
+
+  end
+
+
 
 end
 ```
@@ -142,6 +147,10 @@ artists[0].genre # =>  'Rock'
 artists[1].id # =>  2
 artists[1].name # =>  'ABBA'
 artists[1].genre # =>  'Pop'
+
+
+
+
 
 ```
 
